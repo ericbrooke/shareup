@@ -2,7 +2,7 @@ angular.module('myApp.services', [])
 .factory('ArticleService', function($http, $q) {
   var service = {
     getLatestFeed: function() {
-      var d =$q.defer();
+      var d = $q.defer();
       $http.jsonp('http://ajax.googleapis.com/ajax/services/feed/load' +
       '?v=1.0&num=50&callback=JSON_CALLBACK&q='+
       encodeURIComponent(
