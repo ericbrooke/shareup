@@ -1,4 +1,5 @@
 angular.module('myApp.services', ['ngResource'])
+
 .factory('ArticleService', function($http, $q) {
   var service = {
     getLatestFeed: function() {
@@ -22,16 +23,17 @@ angular.module('myApp.services', ['ngResource'])
 })
 
 .factory('Share', function($resource) {
+  return "Hello";
 })
 
 .factory("SessionService", function($http, $q) {
   var service = {
     getCurrentUser: function() {
       if (service.isAuthenticated()) {
-        return $.q.when(service.currentUser);
+        return $q.when(service.currentUser);
       } else {
         return $http.get('/api/current_user').then(function(resp) {
-          return service.currentUser = resp.date;
+          return service.currentUser = resp.data;
         });
       }
     },

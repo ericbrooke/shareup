@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngRoute', 'ngResource', 'myApp.controllers', 'myApp.services'])
+angular.module('myApp', ['ngRoute', 'myApp.controllers', 'myApp.services'])
 .config(function($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: '/templates/dashboard.html',
@@ -9,5 +9,7 @@ angular.module('myApp', ['ngRoute', 'ngResource', 'myApp.controllers', 'myApp.se
       }
     }
   })
-  .otherwise({redirectTo: '/'});
+  .otherwise({
+    redirectTo: '/'
+    });
 });
