@@ -20,7 +20,6 @@ class Users::SessionsController < Devise::SessionsController
 
   end
 
-
   private
 
   def reject_if_not_authorized_request!
