@@ -7,12 +7,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     if resource.save
       sign_in resource
-      render status: 200
+      render status: 200,
       json: {
         success: true,
         info: "Registered",
         data: {
-          user: resource
+          user: resource,
           auth_token: current_user.authentication_token
         }
       }
