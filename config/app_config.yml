@@ -1,1 +1,1 @@
-defaults: &defaults  twitter:    clientId: "NBsabtxQrSVvkFR63BZuvz7Ij"    clientSecret: "QKThGjX7cM11iWnFv2dtxmUtZ8W1ds6MdSirEGGll6uEYTfW2x"    development:  <<: *defaultstest:  <<: *defaultsproduction:  <<: *defaults
+defaults: &defaults  client:    origin: http://localhost  twitter:    clientId: "NBsabtxQrSVvkFR63BZuvz7Ij"    clientSecret: "QKThGjX7cM11iWnFv2dtxmUtZ8W1ds6MdSirEGGll6uEYTfW2x"development:  <<: *defaultstest:  <<: *defaultsproduction:  <<: *defaults
